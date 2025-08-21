@@ -47,20 +47,12 @@ const Navbar = () => {
         { name: 'Industrial Projects', href: '/services/industrial' },
         { name: 'Renovation & Maintenance', href: '/services/renovation' },
         { name: 'Design & Planning', href: '/services/design' },
-        { name: 'Safety & Compliance', href: '/services/safety' }
+        { name: 'Safety & Compliance', href: '/services/safety' },
+        { name: 'Residential Construction', href: '/services/residential' }
       ]
     },
     { name: 'About', href: '/about' },
-    { 
-      name: 'Projects', 
-      href: '/#projects',
-      dropdown: [
-        { name: 'Commercial', href: '/#commercial-projects' },
-        { name: 'Infrastructure', href: '/#infrastructure-projects' },
-        { name: 'Industrial', href: '/#industrial-projects' },
-        { name: 'Residential', href: '/#residential-projects' }
-      ]
-    },
+    { name: 'Projects', href: '/projects' },
     { name: 'Contact', href: '/contact' }
   ]
 
@@ -154,13 +146,15 @@ const Navbar = () => {
             ))}
             
             {/* CTA Button */}
-            <motion.button
-              className="btn-primary"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get Quote
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                className="btn-primary"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Get Quote
+              </motion.button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -248,9 +242,11 @@ const Navbar = () => {
                 
                 {/* Mobile CTA Button */}
                 <div className="px-4 pt-4">
-                  <button className="w-full btn-primary">
-                    Get Quote
-                  </button>
+                  <Link href="/contact" className="block">
+                    <button className="w-full btn-primary">
+                      Get Quote
+                    </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

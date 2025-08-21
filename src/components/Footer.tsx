@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 // Simple SVG icons to replace lucide-react until dependencies are installed
 const Building2 = ({ className }: { className?: string }) => (
@@ -64,32 +65,7 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const footerLinks = {
-    company: [
-      "About Us",
-      "Our Team",
-      "Careers",
-      "News & Media",
-      "Sustainability",
-      "Safety"
-    ],
-    resources: [
-      "Project Gallery",
-      "Case Studies",
-      "Construction Blog",
-      "Industry Insights",
-      "Safety Guidelines",
-      "Download Brochures"
-    ],
-    support: [
-      "Contact Us",
-      "Request Quote",
-      "Project Status",
-      "Emergency Contact",
-      "FAQ",
-      "Support Center"
-    ]
-  }
+
 
   const socialLinks = [
     { icon: Facebook, href: "#", label: "Facebook" },
@@ -169,55 +145,58 @@ const Footer = () => {
 
           {/* All Links - Right Side */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col md:flex-row gap-16 justify-end">
               {/* Company Links */}
-              <div>
+              <div className="text-right">
                 <h4 className="text-lg font-semibold text-white mb-6">Company</h4>
                 <ul className="space-y-3">
-                  {footerLinks.company.map((item, index) => (
-                    <li key={index}>
-                      <a 
-                        href={item === "About Us" ? "/about" : "#"} 
-                        className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Resources */}
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-6">Resources</h4>
-                <ul className="space-y-3">
-                  {footerLinks.resources.map((resource, index) => (
-                    <li key={index}>
-                      <a 
-                        href="#" 
-                        className="text-gray-400 hover:text-primary-400 transition-colors duration-300 text-sm"
-                      >
-                        {resource}
-                      </a>
-                    </li>
-                  ))}
+                  <li>
+                    <Link href="/about" className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm">
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/team" className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm">
+                      Our Team
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/careers" className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm">
+                      Careers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/news" className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm">
+                      News & Media
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services" className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm">
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/projects" className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm">
+                      Projects
+                    </Link>
+                  </li>
                 </ul>
               </div>
 
               {/* Support */}
-              <div>
+              <div className="text-right">
                 <h4 className="text-lg font-semibold text-white mb-6">Support</h4>
                 <ul className="space-y-3">
-                  {footerLinks.support.map((item, index) => (
-                    <li key={index}>
-                                        <a 
-                    href={item === "Contact Us" ? "/contact" : "#"} 
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm"
-                  >
-                    {item}
-                  </a>
-                    </li>
-                  ))}
+                  <li>
+                    <Link href="/contact" className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm">
+                      Contact Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/faq" className="text-gray-300 hover:text-primary-400 transition-colors duration-300 text-sm">
+                      FAQ
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -272,12 +251,9 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="text-center">
             <div className="text-gray-400 text-sm">
-              © 2024 DewInfra. All rights reserved. | Privacy Policy | Terms of Service
-            </div>
-            <div className="text-gray-400 text-sm">
-              Built with ❤️ for construction excellence
+              © 2024 DewInfra. All rights reserved. | <Link href="/privacy" className="hover:text-primary-400 transition-colors duration-300">Privacy Policy</Link> | <Link href="/terms" className="hover:text-primary-400 transition-colors duration-300">Terms of Service</Link>
             </div>
           </div>
         </div>

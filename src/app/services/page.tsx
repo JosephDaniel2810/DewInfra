@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Building2, HardHat, Truck, Wrench, Ruler, Shield } from 'lucide-react'
+import { ArrowRight, Building2, HardHat, Truck, Wrench, Ruler, Shield, Home } from 'lucide-react'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -56,6 +56,14 @@ const ServicesPage = () => {
       features: ["OSHA Standards", "Training Programs", "Regular Audits", "Risk Management"],
       image: "/images/services/safety.jpg",
       href: "/services/safety"
+    },
+    {
+      icon: Home,
+      title: "Residential Construction",
+      description: "Custom homes and family residences built with quality craftsmanship and personalized design for your dream home.",
+      features: ["Custom Design", "Quality Materials", "Family-Focused", "Personalized Service"],
+      image: "/images/services/residential.jpg",
+      href: "/services/residential"
     }
   ]
 

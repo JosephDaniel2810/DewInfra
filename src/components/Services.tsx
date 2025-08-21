@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Building2, HardHat, Truck, Wrench, Ruler, Shield } from 'lucide-react'
+import { Building2, HardHat, Truck, Wrench, Ruler, Shield, Home } from 'lucide-react'
 import Link from 'next/link'
 
 const Services = () => {
@@ -41,6 +41,12 @@ const Services = () => {
       title: "Safety & Compliance",
       description: "Rigorous safety protocols and regulatory compliance ensuring project success and worker protection.",
       features: ["OSHA Standards", "Training Programs", "Regular Audits"]
+    },
+    {
+      icon: Home,
+      title: "Residential Construction",
+      description: "Custom homes and family residences built with quality craftsmanship and personalized design for your dream home.",
+      features: ["Custom Design", "Quality Materials", "Family-Focused"]
     }
   ]
 
