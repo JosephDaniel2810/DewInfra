@@ -145,7 +145,7 @@ const Footer = () => {
 
           {/* All Links - Right Side */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
-            <div className="flex flex-col md:flex-row gap-16 justify-end">
+            <div className="flex justify-end space-x-8 md:space-x-12">
               {/* Company Links */}
               <div className="text-right">
                 <h4 className="text-lg font-semibold text-white mb-6">Company</h4>

@@ -68,22 +68,22 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <motion.div
             className="flex items-center"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-accent-500 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">D</span>
+            <Link href="/" className="flex items-center space-x-2 md:space-x-3">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary-600 to-accent-500 rounded-xl flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-lg md:text-xl">D</span>
               </div>
               <div>
-                <span className="text-2xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
+                <span className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent">
                   DewInfra
                 </span>
-                <p className="text-xs text-gray-500 -mt-1">Construction Excellence</p>
+                <p className="text-xs text-gray-500 -mt-1 hidden md:block">Construction Excellence</p>
               </div>
             </Link>
           </motion.div>
@@ -180,7 +180,7 @@ const Navbar = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-gray-200 mt-4"
+              className="lg:hidden border-t border-gray-200 mt-2"
             >
               <div className="py-4 space-y-2">
                 {navigation.map((item) => (

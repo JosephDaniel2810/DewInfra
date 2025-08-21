@@ -85,7 +85,7 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 md:pt-32">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -141,7 +141,7 @@ const Hero = () => {
       </div>
 
       {/* Image Navigation Dots */}
-      <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
+      <div className="absolute bottom-20 md:bottom-32 left-1/2 transform -translate-x-1/2 flex space-x-3 z-10">
         {heroImages.map((_, index) => (
           <motion.button
             key={index}
@@ -158,7 +158,7 @@ const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 text-center pt-8 md:pt-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
